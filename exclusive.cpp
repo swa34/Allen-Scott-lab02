@@ -2,19 +2,19 @@
 #include<iostream>
 #include <sstream>
 #include <string>
+
 using namespace std;
 
-int main()
-{
+int main() {
     string str;
-int exclusive = 0;
+    int exclusive = 0;
     int numbers = 0;
     cout << "Enter integers: ";
-    getline( cin,str);
-    stringstream  number;
+    getline(cin, str);
+    stringstream number;
     number << str;
-   number >> numbers;
-   exclusive = exclusive ^ numbers;
+    number >> numbers;
+    exclusive = exclusive ^ numbers;
     cout << str << endl;
 
     cout << exclusive << endl;
