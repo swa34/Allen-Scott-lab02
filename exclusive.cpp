@@ -11,13 +11,16 @@ int main() {
     int numbers = 0;
     cout << "Enter integers: ";
     getline(cin, str);
+
     stringstream number;
     number << str;
-    number >> numbers;
-    exclusive = exclusive ^ numbers;
-    cout << str << endl;
 
-    cout << exclusive << endl;
+    number >> numbers;
+    while (numbers != 0) {
+        exclusive = numbers ^ exclusive;
+        numbers--;
+    }
+    cout << " Exclusive: " << exclusive << endl;
 
 
     return 0;
